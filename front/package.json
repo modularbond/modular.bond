@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"cd ../api && flask run\" \"next dev\"",
+    "dev": "concurrently \"npm run next\" \"npm run django\"",
+    "next": "next dev",
+    "django": "python ../api/manage.py runserver",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
